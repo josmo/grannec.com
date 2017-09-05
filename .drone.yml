@@ -1,0 +1,27 @@
+pipeline:
+  publish:
+    image: plugins/docker
+    secrets: [ docker_username, docker_password ]
+    repo: ${DRONE_REPO}
+    tag:
+      - latest
+      - ${DRONE_BUILD_NUMBER}
+    file: Dockerfile
+    insecure: true
+    when:
+      local: false
+      event: [ push ]
+
+  deploy:
+    image: peloton/drone-rancher
+    url: http://rancher.seattleslow.com
+    secrets: [ rancher_access_key, rancher_secret_key ]
+    service: ${DRONE_REPO}
+    docker_image: ${DRONE_REPO}:${DRONE_BUILD_NUMBER}
+    start_first: false
+    confirm: true
+    timeout: 180
+    when:
+      local: false
+      event: push
+branches: [ master ]
