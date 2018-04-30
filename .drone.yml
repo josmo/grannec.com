@@ -3,25 +3,32 @@ pipeline:
     image: plugins/docker
     secrets: [ docker_username, docker_password ]
     repo: ${DRONE_REPO}
-    tag:
-      - latest
-      - ${DRONE_BUILD_NUMBER}
+    auto_tag: true
     file: Dockerfile
     insecure: true
     when:
-      local: false
-      event: [ push ]
+      event: [ push, tag ]
 
   deploy:
     image: peloton/drone-rancher
     url: http://rancher.seattleslow.com
     secrets: [ rancher_access_key, rancher_secret_key ]
     service: ${DRONE_REPO}
-    docker_image: ${DRONE_REPO}:${DRONE_BUILD_NUMBER}
+    docker_image: "${DRONE_REPO}:${DRONE_TAG}"
     start_first: false
     confirm: true
     timeout: 180
     when:
-      local: false
-      event: push
+      event: [ tag ]
+  deployk8s:
+    image: quay.io/honestbee/drone-kubernetes
+    kubernetes_server: https://rancher.pelo.tech/k8s/clusters/c-cr9fw
+    secrets: [ kubernetes_token ]
+    namespace: sites
+    deployment: grannec-web
+    container: grannec-web
+    repo: ${DRONE_REPO}
+    tag: latest
+    when:
+      event: [ push ] 
 branches: [ master ]
