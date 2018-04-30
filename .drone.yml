@@ -2,10 +2,9 @@ pipeline:
   publish:
     image: plugins/docker
     secrets: [ docker_username, docker_password ]
-    repo: ${DRONE_REPO}
+    repo: josmo/grannec-web
     auto_tag: true
     file: Dockerfile
-    insecure: true
     when:
       event: [ push, tag ]
 
@@ -13,8 +12,8 @@ pipeline:
     image: peloton/drone-rancher
     url: http://rancher.seattleslow.com
     secrets: [ rancher_access_key, rancher_secret_key ]
-    service: ${DRONE_REPO}
-    docker_image: "${DRONE_REPO}:${DRONE_TAG}"
+    service: josmo/grannec-web
+    docker_image: "josmo/grannec-web:${DRONE_TAG}"
     start_first: false
     confirm: true
     timeout: 180
