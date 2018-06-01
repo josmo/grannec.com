@@ -15,7 +15,7 @@ pipeline:
     secrets: [ kubernetes_token ]
     namespaces: josmo
     deployment_names: grannec-web
-    docker_image: "grannec-web:latest"
+    docker_image: "josmo/grannec-web:latest"
     container_names: grannec-web
     when:
       event: [ push ]
