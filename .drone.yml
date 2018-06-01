@@ -8,26 +8,17 @@ pipeline:
     when:
       event: [ push, tag ]
 
-  deploy:
-    image: peloton/drone-rancher
-    url: http://rancher.seattleslow.com
-    secrets: [ rancher_access_key, rancher_secret_key ]
-    service: josmo/grannec-web
-    docker_image: "josmo/grannec-web:${DRONE_TAG}"
-    start_first: false
-    confirm: true
-    timeout: 180
-    when:
-      event: [ tag ]
-  deployk8s:
-    image: quay.io/honestbee/drone-kubernetes
-    kubernetes_server: https://rancher.pelo.tech/k8s/clusters/c-cr9fw
+  deploy_dev:
+    image: peloton/drone-k8s-deployment
+    pull: true
+    url: https://rancher.pelo.tech/k8s/clusters/c-ss4wc
     secrets: [ kubernetes_token ]
-    namespace: sites
-    deployment: grannec-web
-    container: grannec-web
-    repo: ${DRONE_REPO}
-    tag: latest
+    namespaces: josmo
+    deployment_names: grannec-web
+    docker_image: "grannec-web:latest"
+    container_names: grannec-web
     when:
-      event: [ push ] 
+      event: [ push ]
+      branch: [ master ]
+
 branches: [ master ]
