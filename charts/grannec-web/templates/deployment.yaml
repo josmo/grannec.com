@@ -11,8 +11,9 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ template "grannec-web.name" . }}
-      release: {{ .Release.Name }}
+#      app: {{ template "grannec-web.name" . }}
+#      release: {{ .Release.Name }}
+      workload.user.cattle.io/workloadselector: {{ template "grannec-web.fullname" . }}
   template:
     metadata:
       labels:
