@@ -8,17 +8,34 @@ pipeline:
     when:
       event: [ push, tag ]
 
-  deploy_dev:
-    image: peloton/drone-k8s-deployment
-    pull: true
-    url: https://rancher.pelo.tech/k8s/clusters/c-ss4wc
-    secrets: [ kubernetes_token ]
-    namespaces: josmo
-    deployment_names: grannec-web
-    docker_image: "josmo/grannec-web:latest"
-    container_names: grannec-web
+  deploy-latest-chart:
+    image: quay.io/ipedrazas/drone-helm
+    chart: ./charts/grannec-web
+    values:
+    - annotations.deployedDate="${DRONE_JOB_STARTED}"
+    - annotations.buildNumber="${DRONE_BUILD_NUMBER}"
+    release: "gw-latest"
+    namespace: josmo
+    debug: true
+    wait: true
+    secrets: [ api_server, kubernetes_token ]
     when:
-      event: [ push ]
-      branch: [ master ]
+      event: [ push, master ]
+
+
+#  deploy_dev:
+#    image: peloton/drone-k8s-deployment
+#    pull: true
+#    url: https://rancher.pelo.tech/k8s/clusters/c-ss4wc
+#    secrets: [ kubernetes_token ]
+#    namespaces: josmo
+#    deployment_names: grannec-web
+#    docker_image: "josmo/grannec-web:latest"
+#    container_names: grannec-web
+#    when:
+#      event: [ push ]
+#      branch: [ master ]
+
+
 
 branches: [ master ]
