@@ -20,10 +20,10 @@ annotations:
 
 certificate:
   enabled: true
-  commonName: chart.grannec.com
-  secretName: chart-grannec-tls
+  commonName: www.grannec.com
+  secretName: www-grannec-tls
   domains:
-    - chart.grannec.com
+    - www.grannec.com
 
 ingress:
   enabled: true
@@ -32,11 +32,11 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - chart.grannec.com
+    - www.grannec.com
   tls:
     - secretName: chart-grannec-tls
       hosts:
-        - chart.grannec.com
+        - wwww.grannec.com
   #  - secretName: chart-example-tls
   #    hosts:
   #      - chart-example.local

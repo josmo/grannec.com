@@ -15,5 +15,6 @@ spec:
       protocol: TCP
       name: http
   selector:
+    'workload.user.cattle.io/workloadselector': {{ template "grannec-web.fullname" . }}
     app: {{ template "grannec-web.name" . }}
     release: {{ .Release.Name }}
