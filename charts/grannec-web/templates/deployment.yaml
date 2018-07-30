@@ -7,18 +7,20 @@ metadata:
     chart: {{ template "grannec-web.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
+    'workload.user.cattle.io/workloadselector': {{ template "grannec-web.fullname" . }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-#      app: {{ template "grannec-web.name" . }}
-#      release: {{ .Release.Name }}
-      "workload.user.cattle.io/workloadselector": {{ template "grannec-web.fullname" . }}
+      app: {{ template "grannec-web.name" . }}
+      release: {{ .Release.Name }}
+#      'workload.user.cattle.io/workloadselector': {{ template "grannec-web.fullname" . }}
   template:
     metadata:
       labels:
         app: {{ template "grannec-web.name" . }}
         release: {{ .Release.Name }}
+        'workload.user.cattle.io/workloadselector': {{ template "grannec-web.fullname" . }}
       annotations:
         buildNumber: {{ .Values.annotations.buildNumber | quote }}
         deployedDate: {{ .Values.annotations.deployedDate | quote }}

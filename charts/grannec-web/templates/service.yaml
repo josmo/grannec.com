@@ -1,3 +1,4 @@
+{{- if .Values.service.enabled -}}
 apiVersion: v1
 kind: Service
 metadata:
@@ -15,6 +16,7 @@ spec:
       protocol: TCP
       name: http
   selector:
-    "workload.user.cattle.io/workloadselector": {{ template "grannec-web.fullname" . }}
+    'workload.user.cattle.io/workloadselector': {{ template "grannec-web.fullname" . }}
 #    app: {{ template "grannec-web.name" . }}
 #    release: {{ .Release.Name }}
+{{- end }}

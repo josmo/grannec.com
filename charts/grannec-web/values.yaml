@@ -10,6 +10,7 @@ image:
   pullPolicy: IfNotPresent
 
 service:
+  enabled: true
   type: ClusterIP
   port: 80
 
@@ -34,9 +35,9 @@ ingress:
   hosts:
     - www.grannec.com
   tls:
-    - secretName: chart-grannec-tls
+    - secretName: www-grannec-tls
       hosts:
-        - wwww.grannec.com
+        - www.grannec.com
   #  - secretName: chart-example-tls
   #    hosts:
   #      - chart-example.local
