@@ -8,6 +8,8 @@ metadata:
     chart: {{ template "grannec-web.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
+  annotations:
+    field.cattle.io/targetWorkloadIds: '["deployment:{{ .Release.Namespace }}:{{ template "grannec-web.fullname" . }}"]'
 spec:
   type: {{ .Values.service.type }}
   ports:
