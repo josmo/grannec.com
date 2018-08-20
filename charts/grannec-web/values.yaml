@@ -19,18 +19,13 @@ annotations:
   buildNumber: 0
   deployedDate: 0000-00-00
 
-certificate:
-  enabled: true
-  commonName: www.grannec.com
-  secretName: www-grannec-tls
-  domains:
-    - www.grannec.com
-
 ingress:
   enabled: true
-  annotations: {}
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
+  annotations:
+    ingress.kubernetes.io/ssl-redirect: "true"
+    kubernetes.io/tls-acme: "true"
+    certmanager.k8s.io/cluster-issuer: letsencrypt
+    kubernetes.io/ingress.class: "nginx"
   path: /
   hosts:
     - www.grannec.com
@@ -38,9 +33,6 @@ ingress:
     - secretName: www-grannec-tls
       hosts:
         - www.grannec.com
-  #  - secretName: chart-example-tls
-  #    hosts:
-  #      - chart-example.local
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
