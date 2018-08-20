@@ -7,7 +7,7 @@ replicaCount: 1
 image:
   repository: josmo/grannec-web
   tag: latest
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 
 service:
   enabled: true
