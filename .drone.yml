@@ -8,7 +8,6 @@ pipeline:
     when:
       event: [ push, tag ]
 
-
   deploy-dev:
     image: peloton/drone-helm:0.0.3
     chart: ./helm/grannec-web
@@ -16,7 +15,7 @@ pipeline:
     values:
     - annotations.deployedDate="${DRONE_JOB_CREATED}"
     - annotations.buildNumber="${DRONE_BUILD_NUMBER}"
-    release: prod
+    release: josmo
     namespace: josmo
     wait: true
     timeout: 200
