@@ -13,7 +13,7 @@ pipeline:
     chart: ./helm/grannec-web
     update_dependencies: true
     values:
-    - annotations.deployedDate="${DRONE_JOB_CREATED}"
+    - annotations.deployedDate="${DRONE_BUILD_CREATED}"
     - annotations.buildNumber="${DRONE_BUILD_NUMBER}"
     release: josmo
     namespace: josmo
