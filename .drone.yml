@@ -1,28 +1,51 @@
-pipeline:
-  publish:
+kind: pipeline
+name: default
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+  - name: publish
+    pull: default
     image: plugins/docker
-    secrets: [ docker_username, docker_password ]
-    repo: josmo/grannec-web
-    auto_tag: true
-    file: Dockerfile
+    settings:
+      auto_tag: true
+      file: Dockerfile
+      repo: josmo/grannec-web
+    environment:
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+      DOCKER_USERNAME:
+        from_secret: docker_username
     when:
-      event: [ push, tag ]
+      event:
+        - push
+        - tag
 
-  deploy-dev:
+  - name: deploy-dev
+    pull: default
     image: peloton/drone-helm:0.0.3
-    chart: ./helm/grannec-web
-    update_dependencies: true
-    values:
-    - annotations.deployedDate="${DRONE_BUILD_CREATED}"
-    - annotations.buildNumber="${DRONE_BUILD_NUMBER}"
-    release: josmo
-    namespace: josmo
-    wait: true
-    timeout: 200
-    secrets: [ api_server, kubernetes_token ]
+    settings:
+      chart: ./helm/grannec-web
+      namespace: josmo
+      release: josmo
+      timeout: 200
+      update_dependencies: true
+      values:
+        - "annotations.deployedDate=\"${DRONE_BUILD_CREATED}\""
+        - "annotations.buildNumber=\"${DRONE_BUILD_NUMBER}\""
+      wait: true
+    environment:
+      API_SERVER:
+        from_secret: api_server
+      KUBERNETES_TOKEN:
+        from_secret: kubernetes_token
     when:
-      event: [ push ]
-      branch: master
+      branch:
+        - master
+      event:
+        - push
 
 
-branches: [ master ]
+
