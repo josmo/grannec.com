@@ -46,7 +46,7 @@ steps:
       chart: ./helm/grannec-web
       namespace: josmo
       release: josmo
-      timeout: 200
+      timeout: 200s
       update_dependencies: true
       values:
         - "annotations.deployedDate=\"${DRONE_BUILD_CREATED}\""
