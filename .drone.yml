@@ -4,7 +4,6 @@ name: default
 platform:
   os: linux
   arch: amd64
-
 steps:
   - name: publish
     pull: default
@@ -19,13 +18,30 @@ steps:
       DOCKER_USERNAME:
         from_secret: docker_username
     when:
+      branch:
+        - master
       event:
         - push
-        - tag
-
+  - name: helm-lint
+    pull: default
+    image: pelotech/drone-helm3:0.5.0
+    settings:
+      helm_command: lint
+      chart: ./helm/grannec-web
+      wait: true
+    environment:
+      API_SERVER:
+        from_secret: api_server
+      KUBERNETES_TOKEN:
+        from_secret: kubernetes_token
+    when:
+      branch:
+        - master
+      event:
+        - push
   - name: deploy-dev
     pull: default
-    image: peloton/drone-helm:0.0.3
+    image: pelotech/drone-helm3:0.5.0
     settings:
       chart: ./helm/grannec-web
       namespace: josmo
