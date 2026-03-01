@@ -8,7 +8,15 @@
       "WebFetch(domain:www.linkedin.com)",
       "WebFetch(domain:www.instagram.com)",
       "WebFetch(domain:github.com)",
-      "WebFetch(domain:www.facebook.com)"
+      "WebFetch(domain:www.facebook.com)",
+      "WebFetch(domain:www.grannec.com)",
+      "Bash(curl:*)",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "mcp__plugin_playwright_playwright__browser_evaluate",
+      "mcp__plugin_playwright_playwright__browser_run_code",
+      "mcp__plugin_playwright_playwright__browser_press_key",
+      "Bash(open:*)"
     ]
   }
 }

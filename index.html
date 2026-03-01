@@ -8,10 +8,10 @@
   <title>Joachim Hill-Grannec</title>
   <meta content="Joachim Hill-Grannec - Technical leader, team builder, and surf enthusiast. Building teams and solving hard problems around the globe." name="description">
   <meta content="Joachim Hill-Grannec, CTO, technical leadership, consulting, cloud, kubernetes, teams" name="keywords">
-  <meta property='og:title' content='About Joachim Hill-Grannec'/>
-  <meta property='og:image' content='https://www.grannec.com/assets/img/team/team-1.webp'/>
-  <meta property='og:description' content='Technical leader, team builder, and surf enthusiast. Building teams and solving hard problems around the globe.'/>
-  <meta property='og:url' content='https://www.grannec.com/'/>
+  <meta property="og:title" content="Joachim Hill-Grannec">
+  <meta property="og:image" content="https://www.grannec.com/assets/img/team/team-1.webp">
+  <meta property="og:description" content="From dance floors to cloud platforms. Building teams from wherever the waves are.">
+  <meta property="og:url" content="https://www.grannec.com/">
 
   <!-- Favicons -->
   <link href="assets/img/team/team-1.webp" rel="icon">
@@ -27,8 +27,8 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Main CSS -->
+  <link href="assets/css/redesign.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Mamba - v4.3.0
@@ -40,550 +40,147 @@
 
 <body>
 
-  <!-- ======= Top Bar ======= -->
-  <section id="topbar" class="d-flex align-items-center">
-    <div class="container d-flex justify-content-center justify-content-md-between">
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope-fill"></i><a href="mailto:joachim.hill@gmail.com">joachim.hill@gmail.com</a>
-      </div>
-      <div class="social-links d-none d-md-block">
-        <a href="https://www.github.com/josmo" class="github"><i class="bi bi-github"></i></a>
-        <a href="https://x.com/lindyblues" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://www.facebook.com/joachimhg" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/josmo99/" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/joachimehillgrannec/" class="linkedin"><i class="bi bi-linkedin"></i></a>
-      </div>
+  <!-- ======= Navigation ======= -->
+  <nav class="site-nav" id="site-nav">
+    <a href="index.html" class="nav-logo">Joachim Hill-Grannec</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#story" class="scrollto">Story</a></li>
+      <li><a href="#connect" class="scrollto">Connect</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+    <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation">
+      <i class="bi bi-list"></i>
+    </button>
+  </nav>
+
+  <!-- ======= Hero ======= -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" style="background-image: url('assets/img/slide/slide-1.webp');"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 data-aos="fade-up">Joachim Hill-Grannec</h1>
+      <p class="hero-tagline" data-aos="fade-up" data-aos-delay="100">From dance floors to cloud platforms. Building teams from wherever the waves are.</p>
+    </div>
+    <div class="scroll-indicator">
+      <i class="bi bi-chevron-down"></i>
     </div>
   </section>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
-    <div class="container d-flex align-items-center">
-
-      <div class="logo me-auto">
-        <h1><a href="index.html">Joachim Hill-Grannec</a></h1>
-      </div>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#interests">Interests</a></li>
-          <li><a class="nav-link scrollto" href="#portfolio">Gallery</a></li>
-          <li><a class="nav-link scrollto" href="#connect">Connect</a></li>
-          <li><a class="nav-link scrollto" href="#recruiters">Recruiter FAQ</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero-fullscreen">
-    <div class="hero-overlay"></div>
-    <div class="hero-content container">
-      <h1>Joachim Hill-Grannec</h1>
-      <p class="hero-tagline">Building teams. Solving hard problems. Surfing the rest.</p>
-      <div class="hero-cta">
-        <a href="#about" class="btn-hero scrollto">Learn More</a>
-      </div>
-    </div>
-  </section><!-- End Hero -->
-
   <main id="main">
 
-    <!-- ======= About Us Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
+    <!-- ======= Story ======= -->
+    <section class="story" id="story">
 
-        <div class="row no-gutters">
-          <div class="col-lg-6 video-box">
-            <img src="assets/img/about.webp" class="img-fluid" alt="About Joachim" loading="lazy">
-          </div>
-
-          <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
-
-            <div class="section-title">
-              <h2>About Me</h2>
-              <p>I spend my time helping software delivery teams ship better, faster. From architecting global-scale platforms to leading hundred-million-dollar initiatives, I've built the systems and the teams behind them. I bring deep experience in engineering culture, developer tooling, and scaling organizations through growth.</p>
-            </div>
-
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <div class="icon"><i class="bx bx-fingerprint"></i></div>
-              <h4 class="title"><a href="">Tech I Work With</a></h4>
-              <p class="description">Kubernetes, Docker, AWS, GCP, Azure -- Flutter, React Native, iOS & Android -- Go, Java, Kotlin, TypeScript, .NET -- Kafka, Kinesis, and whatever the problem calls for.</p>
-            </div>
-
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <div class="icon"><i class="bx bx-gift"></i></div>
-              <h4 class="title"><a href="">Things to know</a></h4>
-              <p class="description">From two-person startups to Fortune 500s across aerospace, finance, pharma, and more -- I adapt to the domain without missing a beat.</p>
-            </div>
-
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <div class="icon"><i class="bx bx-buildings"></i></div>
-              <h4 class="title"><a href="">Companies I've Worked With</a></h4>
-              <p class="description">Warby Parker, AWS, Smartsheet, GameStop, T-Mobile, Starbucks</p>
-            </div>
-
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <div class="icon"><i class="bx bx-certification"></i></div>
-              <h4 class="title"><a href="">Certifications</a></h4>
-              <p class="description">AWS Solutions Architect -- Professional &middot; AWS Solutions Architect -- Associate &middot; AWS Cloud Practitioner &middot; CompTIA Security+</p>
-            </div>
-
-          </div>
+      <!-- Beat 1: Roots -->
+      <div class="story-beat" data-aos="fade-up">
+        <div class="story-beat-image" style="background-image: url('assets/img/team/team-1.webp');"></div>
+        <div class="story-beat-content">
+          <span class="story-beat-label">Roots</span>
+          <h2>Grew up in France. Traveled the world teaching dance.</h2>
+          <p>Bilingual from the start, I spent years crossing continents teaching lindy hop and blues -- learning that the best way to connect with people is to meet them where they are. That instinct shaped everything that came after.</p>
         </div>
-
       </div>
-    </section><!-- End About Us Section -->
 
-    <!-- ======= About Lists Section ======= -->
-    <section class="about-lists">
-      <div class="container">
+      <!-- Photo break -->
+      <div class="photo-break" style="background-image: url('assets/img/portfolio/6.webp');" role="img" aria-label="Mountain landscape"></div>
 
-        <div class="row no-gutters">
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up">
-            <span>NOW</span>
-            <h4>Community</h4>
-            <p>Solving interesting problems at the intersection of platform engineering and reliability. Contributor to open source projects such as Harness, Drone CI, Homebrew, Kube-OVN, Supabase, FerretDB, Terraform modules, and NYC Mesh.</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
-            <span>2014</span>
-            <h4>Culture, Orgs, Team and more</h4>
-            <p>Continued working on tech while focusing more on building teams, creating organizations, and mentoring.</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="200">
-            <span>2011</span>
-            <h4>Mobile and more</h4>
-            <p>Focusing pretty heavily in software around mobile and at scale software delivery and systems design.</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="400">
-            <span>2003</span>
-            <h4>Manufacturing, Aerospace, Energy</h4>
-            <p>A wide arc -- from welding shops to trading floors, building everything from PBX systems to embedded firmware to mobile apps.</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="500">
-            <span>Prior</span>
-            <h4>Various</h4>
-            <p>Grew up in France, bilingual. Traveled the world learning and teaching dance -- lindy hop, blues, and more.</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="600">
-            <span>Community</span>
-            <h4>Volunteering &amp; Mentoring</h4>
-            <p>Startup Weekend facilitator -- taught entrepreneurship across multiple continents. Code Fellows mentor helping the next generation of developers.</p>
-          </div>
-
+      <!-- Beat 2: Range -->
+      <div class="story-beat reverse" data-aos="fade-up">
+        <div class="story-beat-image" style="background-image: url('assets/img/portfolio/5.webp');"></div>
+        <div class="story-beat-content">
+          <span class="story-beat-label">Range</span>
+          <h2>Welding shops to cloud platforms.</h2>
+          <p>PBX systems. Embedded firmware. Mobile apps. Aerospace, energy, manufacturing, finance, pharma -- every domain has its own language, and I've learned enough of them to know that the problem-solving never changes. Only the vocabulary does.</p>
         </div>
-
       </div>
-    </section><!-- End About Lists Section -->
 
-    <!-- ======= Interests Section ======= -->
-    <section id="interests" class="services section-bg">
-      <div class="container" data-aos="fade-up">
+      <!-- Photo break -->
+      <div class="photo-break" style="background-image: url('assets/img/portfolio/3.webp');" role="img" aria-label="Ocean waves"></div>
 
-        <div class="section-title">
-          <h2>Interests</h2>
+      <!-- Beat 3: Scale -->
+      <div class="story-beat" data-aos="fade-up">
+        <div class="story-beat-image" style="background-image: url('assets/img/slide/slide-3.webp');"></div>
+        <div class="story-beat-content">
+          <span class="story-beat-label">Scale</span>
+          <h2>Building teams behind the platforms.</h2>
+          <p>Led hundred-million-dollar initiatives. Built engineering teams that helped Nordstrom, Warby Parker, Starbucks, and others solve their hardest problems. The technology matters, but the teams matter more -- getting the right people aligned on the right problem is the actual hard part.</p>
         </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
-            <div class="interest-card">
-              <div class="icon"><i class="bi bi-people"></i></div>
-              <h4 class="title"><a href="">Teams/Culture</a></h4>
-              <p class="description">I love to geek out about creating/inspiring teams which value empathy, mastery, and communication.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="interest-card">
-              <div class="icon"><i class="bi bi-app"></i></div>
-              <h4 class="title"><a href="">App Development</a></h4>
-              <p class="description">Flutter has my attention these days, though I still coach teams on native Android/iOS. Also deep into NestJS, React, and whatever ships the idea.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="interest-card">
-              <div class="icon"><i class="bi bi-globe"></i></div>
-              <h4 class="title"><a href="">Cloud Things</a></h4>
-              <p class="description">Everything from terraform, Cloud providers (AWS, GCP, Azure), to Rancher, K8s, Kafka, Docker, Drone.io, etc</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="interest-card">
-              <div class="icon"><i class="bi bi-broadcast"></i></div>
-              <h4 class="title"><a href="">Process</a></h4>
-              <p class="description">Lean, Scrum, continuous flow, continuous improvement, TDD, pairing -- whatever moves the needle for the team.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="interest-card">
-              <div class="icon"><i class="bi bi-brightness-high"></i></div>
-              <h4 class="title"><a href="">Coaching</a></h4>
-              <p class="description">Helping individuals and groups accomplish their goals</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
-            <div class="interest-card">
-              <div class="icon"><i class="bi bi-calendar2-week"></i></div>
-              <h4 class="title"><a href="">Company Ops</a></h4>
-              <p class="description">Standing up the unglamorous essentials -- accounting, HR, payroll, benefits -- so startups can focus on building.</p>
-            </div>
-          </div>
-        </div>
-
       </div>
-    </section><!-- End Interests Section -->
 
-    <!-- ======= Portfolio / Gallery Section ======= -->
-    <section id="portfolio" class="portfolio">
-      <div class="container" data-aos="fade-up">
+      <!-- Photo break -->
+      <div class="photo-break" style="background-image: url('assets/img/portfolio/14.webp');" role="img" aria-label="Surfers with boards at sunset"></div>
 
-        <div class="section-title">
-          <h2>Gallery</h2>
+      <!-- Beat 4: Now -->
+      <div class="story-beat reverse" data-aos="fade-up">
+        <div class="story-beat-image" style="background-image: url('assets/img/portfolio/11.webp');"></div>
+        <div class="story-beat-content">
+          <span class="story-beat-label">Now</span>
+          <h2>Still solving hard problems. Better views.</h2>
+          <p>CTO and partner, splitting time between Seattle, NYC, and El Salvador. Contributing to open source -- Harness, Drone CI, Homebrew, Terraform, and more. Building teams from wherever the waves are.</p>
         </div>
-
-        <div class="portfolio-grid">
-
-          <div class="portfolio-card">
-            <a href="assets/img/portfolio/1.webp" class="portfolio-lightbox">
-              <img src="assets/img/portfolio/1.webp" alt="Gallery 1" loading="lazy">
-              <div class="portfolio-overlay"><span><i class="bi bi-zoom-in"></i></span></div>
-            </a>
-          </div>
-
-          <div class="portfolio-card">
-            <a href="assets/img/portfolio/2.webp" class="portfolio-lightbox">
-              <img src="assets/img/portfolio/2.webp" alt="Gallery 2" loading="lazy">
-              <div class="portfolio-overlay"><span><i class="bi bi-zoom-in"></i></span></div>
-            </a>
-          </div>
-
-          <div class="portfolio-card">
-            <a href="assets/img/portfolio/3.webp" class="portfolio-lightbox">
-              <img src="assets/img/portfolio/3.webp" alt="Gallery 3" loading="lazy">
-              <div class="portfolio-overlay"><span><i class="bi bi-zoom-in"></i></span></div>
-            </a>
-          </div>
-
-          <div class="portfolio-card">
-            <a href="assets/img/portfolio/4.webp" class="portfolio-lightbox">
-              <img src="assets/img/portfolio/4.webp" alt="Gallery 4" loading="lazy">
-              <div class="portfolio-overlay"><span><i class="bi bi-zoom-in"></i></span></div>
-            </a>
-          </div>
-
-          <div class="portfolio-card">
-            <a href="assets/img/portfolio/5.webp" class="portfolio-lightbox">
-              <img src="assets/img/portfolio/5.webp" alt="Gallery 5" loading="lazy">
-              <div class="portfolio-overlay"><span><i class="bi bi-zoom-in"></i></span></div>
-            </a>
-          </div>
-
-          <div class="portfolio-card">
-            <a href="assets/img/portfolio/6.webp" class="portfolio-lightbox">
-              <img src="assets/img/portfolio/6.webp" alt="Gallery 6" loading="lazy">
-              <div class="portfolio-overlay"><span><i class="bi bi-zoom-in"></i></span></div>
-            </a>
-          </div>
-
-          <div class="portfolio-card">
-            <a href="assets/img/portfolio/7.webp" class="portfolio-lightbox">
-              <img src="assets/img/portfolio/7.webp" alt="Gallery 7" loading="lazy">
-              <div class="portfolio-overlay"><span><i class="bi bi-zoom-in"></i></span></div>
-            </a>
-          </div>
-
-          <div class="portfolio-card">
-            <a href="assets/img/portfolio/8.webp" class="portfolio-lightbox">
-              <img src="assets/img/portfolio/8.webp" alt="Gallery 8" loading="lazy">
-              <div class="portfolio-overlay"><span><i class="bi bi-zoom-in"></i></span></div>
-            </a>
-          </div>
-
-          <div class="portfolio-card">
-            <a href="assets/img/portfolio/9.webp" class="portfolio-lightbox">
-              <img src="assets/img/portfolio/9.webp" alt="Gallery 9" loading="lazy">
-              <div class="portfolio-overlay"><span><i class="bi bi-zoom-in"></i></span></div>
-            </a>
-          </div>
-
-          <div class="portfolio-card">
-            <a href="assets/img/portfolio/10.webp" class="portfolio-lightbox">
-              <img src="assets/img/portfolio/10.webp" alt="Gallery 10" loading="lazy">
-              <div class="portfolio-overlay"><span><i class="bi bi-zoom-in"></i></span></div>
-            </a>
-          </div>
-
-          <div class="portfolio-card">
-            <a href="assets/img/portfolio/11.webp" class="portfolio-lightbox">
-              <img src="assets/img/portfolio/11.webp" alt="Gallery 11" loading="lazy">
-              <div class="portfolio-overlay"><span><i class="bi bi-zoom-in"></i></span></div>
-            </a>
-          </div>
-
-          <div class="portfolio-card">
-            <a href="assets/img/portfolio/12.webp" class="portfolio-lightbox">
-              <img src="assets/img/portfolio/12.webp" alt="Gallery 12" loading="lazy">
-              <div class="portfolio-overlay"><span><i class="bi bi-zoom-in"></i></span></div>
-            </a>
-          </div>
-
-          <div class="portfolio-card">
-            <a href="assets/img/portfolio/13.webp" class="portfolio-lightbox">
-              <img src="assets/img/portfolio/13.webp" alt="Gallery 13" loading="lazy">
-              <div class="portfolio-overlay"><span><i class="bi bi-zoom-in"></i></span></div>
-            </a>
-          </div>
-
-          <div class="portfolio-card">
-            <a href="assets/img/portfolio/14.webp" class="portfolio-lightbox">
-              <img src="assets/img/portfolio/14.webp" alt="Gallery 14" loading="lazy">
-              <div class="portfolio-overlay"><span><i class="bi bi-zoom-in"></i></span></div>
-            </a>
-          </div>
-
-          <div class="portfolio-card">
-            <a href="assets/img/portfolio/15.webp" class="portfolio-lightbox">
-              <img src="assets/img/portfolio/15.webp" alt="Gallery 15" loading="lazy">
-              <div class="portfolio-overlay"><span><i class="bi bi-zoom-in"></i></span></div>
-            </a>
-          </div>
-
-          <div class="portfolio-card">
-            <a href="assets/img/portfolio/16.webp" class="portfolio-lightbox">
-              <img src="assets/img/portfolio/16.webp" alt="Gallery 16" loading="lazy">
-              <div class="portfolio-overlay"><span><i class="bi bi-zoom-in"></i></span></div>
-            </a>
-          </div>
-
-          <div class="portfolio-card">
-            <a href="assets/img/portfolio/17.webp" class="portfolio-lightbox">
-              <img src="assets/img/portfolio/17.webp" alt="Gallery 17" loading="lazy">
-              <div class="portfolio-overlay"><span><i class="bi bi-zoom-in"></i></span></div>
-            </a>
-          </div>
-
-          <div class="portfolio-card">
-            <a href="assets/img/portfolio/18.webp" class="portfolio-lightbox">
-              <img src="assets/img/portfolio/18.webp" alt="Gallery 18" loading="lazy">
-              <div class="portfolio-overlay"><span><i class="bi bi-zoom-in"></i></span></div>
-            </a>
-          </div>
-
-        </div>
-
       </div>
-    </section><!-- End Portfolio Section -->
 
-    <!-- ======= Connect Section ======= -->
-    <section id="connect" class="connect section-bg">
-      <div class="container" data-aos="fade-up">
+    </section>
 
-        <div class="section-title">
-          <h2>Connect</h2>
+    <!-- ======= Proof Strip ======= -->
+    <div class="proof-strip">
+      <div class="proof-logos" data-aos="fade-up">
+        <span>Nordstrom</span>
+        <span>Warby Parker</span>
+        <span>Starbucks</span>
+        <span>AWS</span>
+        <span>Smartsheet</span>
+        <span>T-Mobile</span>
+      </div>
+      <p class="proof-meta" data-aos="fade-up" data-aos-delay="100">
+        AWS Solutions Architect Pro &middot; Security+ &middot;
+        <a href="https://www.github.com/josmo" target="_blank" rel="noopener noreferrer">Open source on GitHub</a>
+      </p>
+    </div>
+
+    <!-- ======= Connect ======= -->
+    <section class="connect-section" id="connect">
+      <div class="connect-grid">
+        <div class="connect-text" data-aos="fade-up">
+          <h2>I'm probably near the water.</h2>
+          <p>
+            <a href="mailto:joachim.hill@gmail.com">joachim.hill@gmail.com</a><br>
+            <a href="mailto:joachim@pelo.tech">joachim@pelo.tech</a>
+          </p>
+          <p class="locations">Seattle &middot; NYC &middot; El Salvador</p>
+          <a href="mailto:joachim.hill@gmail.com" class="connect-cta">Working on something interesting? Let's talk.</a>
         </div>
-
-        <div class="social-grid">
-          <a href="https://www.instagram.com/josmo99/" class="social-card" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-instagram"></i>
-            <h4>Instagram</h4>
-            <p>Surf, travel, and life moments</p>
-          </a>
-          <a href="https://www.linkedin.com/in/joachimehillgrannec/" class="social-card" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-linkedin"></i>
-            <h4>LinkedIn</h4>
-            <p>Professional experience and connections</p>
-          </a>
-          <a href="https://www.github.com/josmo" class="social-card" target="_blank" rel="noopener noreferrer">
+        <div class="connect-social" data-aos="fade-up" data-aos-delay="100">
+          <a href="https://www.github.com/josmo" class="social-link" target="_blank" rel="noopener noreferrer">
             <i class="bi bi-github"></i>
-            <h4>GitHub</h4>
-            <p>Open source and side projects</p>
+            <span>GitHub</span>
           </a>
-          <a href="https://www.facebook.com/joachimhg" class="social-card" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-facebook"></i>
-            <h4>Facebook</h4>
-            <p>Community and personal updates</p>
+          <a href="https://www.linkedin.com/in/joachimehillgrannec/" class="social-link" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://www.instagram.com/josmo99/" class="social-link" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-instagram"></i>
+            <span>Instagram</span>
+          </a>
+          <a href="https://x.com/lindyblues" class="social-link" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-twitter-x"></i>
+            <span>X</span>
           </a>
         </div>
-
       </div>
-    </section><!-- End Connect Section -->
+    </section>
 
-    <!-- ======= Profile Section ======= -->
-    <section id="team" class="team">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Profile</h2>
-        </div>
-
-        <div class="row">
-          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
-            <div class="member">
-              <div class="pic"><img src="assets/img/team/team-1.webp" class="img-fluid" alt="Joachim Hill-Grannec" loading="lazy"></div>
-              <div class="member-info">
-                <h4>Joachim Hill-Grannec</h4>
-                <span>CTO/Partner</span>
-                <div class="social">
-                  <a href="https://www.github.com/josmo" class="github"><i class="bi bi-github"></i></a>
-                  <a href="https://x.com/lindyblues"><i class="bi bi-twitter-x"></i></a>
-                  <a href="https://www.facebook.com/joachimhg" class="facebook"><i class="bi bi-facebook"></i></a>
-                  <a href="https://www.instagram.com/josmo99/" class="instagram"><i class="bi bi-instagram"></i></a>
-                  <a href="https://www.linkedin.com/in/joachimehillgrannec/" class="linkedin"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Profile Section -->
-
-    <!-- ======= Frequently Asked Questions Section ======= -->
-    <section id="recruiters" class="faq section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Frequently Asked Questions</h2>
-        </div>
-
-        <div class="row  d-flex align-items-stretch">
-
-          <div class="col-lg-6 faq-item" data-aos="fade-up">
-            <h4>What info should be included when contacting you? (I won't respond unless this is included)</h4>
-            <p>
-              Rate/Comp range - Group values/culture/goals - distributed or on-site team
-            </p>
-          </div>
-
-          <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="100">
-            <h4>We need a group of people to solve a problem, are you able to help out with that?</h4>
-            <p>
-              Yes! I'm part of a consulting team that can help around most tech problems/initiatives or intro you to a group that can.
-            </p>
-          </div>
-
-          <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="200">
-            <h4>Do you give intros?</h4>
-            <p>
-              Absolutely. Browse my LinkedIn, tell me who and why it's a good fit, and I'll make the introduction.
-            </p>
-          </div>
-
-          <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="300">
-            <h4>Able to work legally in the US and the EU?</h4>
-            <p>
-              Yep!
-            </p>
-          </div>
-
-          <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="400">
-            <h4>What kind of opportunities are you excited about/looking for?</h4>
-            <p>
-              Hard problems around teams and technology
-            </p>
-          </div>
-
-          <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="500">
-            <h4>Have a resume?</h4>
-            <p>
-              No traditional resume -- just grab the PDF export from my LinkedIn profile (More → Save to PDF).
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Frequently Asked Questions Section -->
-
-    <!-- ======= Contact Us Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Contact Me</h2>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-6 d-flex" data-aos="fade-up">
-            <div class="info-box">
-              <i class="bx bx-map"></i>
-              <h3>My Locations</h3>
-              <p>Seattle</p>
-              <p>NYC</p>
-              <p>El Salvador</p>
-            </div>
-          </div>
-
-          <div class="col-lg-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="info-box">
-              <i class="bx bx-envelope"></i>
-              <h3>Email Me</h3>
-              <p>joachim.hill@gmail.com<br>joachim@lancement.com<br>joachim@pelo.tech</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Us Section -->
-
-  </main><!-- End #main -->
+  </main>
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-info">
-            <h3>Joachim Hill-Grannec</h3>
-            <p>
-              <strong>Email:</strong> joachim.hill@gmail.com<br>
-            </p>
-            <div class="social-links mt-3">
-              <a href="https://www.github.com/josmo" class="github"><i class="bx bxl-github"></i></a>
-              <a href="https://x.com/lindyblues"><i class="bx bxl-twitter"></i></a>
-              <a href="https://www.facebook.com/joachimhg" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="https://www.instagram.com/josmo99/" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="https://www.linkedin.com/in/joachimehillgrannec/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">About Me</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#interests">Interests</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#portfolio">Gallery</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#connect">Connect</a></li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
+  <footer class="site-footer">
+    <p>&copy; Joachim Hill-Grannec. All Rights Reserved.</p>
+    <div class="footer-links">
+      <a href="faq.html">Recruiter FAQ</a>
     </div>
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Joachim Hill-Grannec</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
+    <p style="margin-top: 0.5rem; font-size: 0.75rem;">Template base by <a href="https://bootstrapmade.com/">BootstrapMade</a></p>
+  </footer>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -592,8 +189,8 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <!-- Main JS File -->
+  <script src="assets/js/redesign.js"></script>
 
 </body>
 

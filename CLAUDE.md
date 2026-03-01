@@ -7,49 +7,62 @@ Personal brand / portfolio site for Joachim Hill-Grannec. Static HTML deployed t
 - **Static site** -- no build step, no SSG, just HTML/CSS/JS served from S3
 - **Template base**: Mamba v4.3.0 (BootstrapMade) -- must keep attribution in footer per free license
 - **Deployment**: Push to `main` triggers `.github/workflows/main.yml` which syncs to S3 bucket `grannec.com`
+- **Design**: Story-driven scroll layout with full-bleed photography integrated into narrative
 
 ## Key Files
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Single-page site with all sections |
-| `assets/css/style.css` | All custom styles, uses CSS custom properties |
-| `assets/js/main.js` | Scroll handling, portfolio filter, lightbox init |
-| `assets/img/portfolio/` | Gallery images (1-18.jpg), resized to 1200px max |
-| `assets/img/slide/` | Hero background image |
-| `assets/img/team/` | Profile photo |
+| `index.html` | Main story page (hero, 4 narrative beats, proof strip, connect) |
+| `faq.html` | Recruiter FAQ (separate page) |
+| `assets/css/redesign.css` | All styles, uses CSS custom properties |
+| `assets/js/redesign.js` | Nav scroll, mobile toggle, AOS init |
+| `assets/img/portfolio/` | Photography (1-18.webp), used in story beats and photo breaks |
+| `assets/img/slide/` | Hero and story beat background images |
+| `assets/img/team/` | Profile photo (also used in Beat 1 "Roots") |
 | `.github/workflows/main.yml` | S3 deploy on push to main |
+| `index-old.html` | Archived previous template-based layout |
+| `assets/css/style-old.css` | Archived previous stylesheet |
+| `assets/js/main-old.js` | Archived previous JS |
 
 ## Color System (CSS Custom Properties)
 
-All colors are defined as custom properties in `:root` in `style.css`:
+All colors are defined as custom properties in `:root` in `redesign.css`:
 
 ```css
 --color-primary: #428bca;      /* Main blue */
 --color-primary-dark: #1c5c93; /* Darker blue for hover/emphasis */
 --color-primary-light: #9eccf4;/* Light blue accents */
---color-text: #2d3436;         /* Body text */
+--color-text: #1f2d3d;         /* Body text */
 --color-text-light: #636e72;   /* Secondary text */
 --color-bg: #ffffff;           /* Main background */
 --color-bg-alt: #f5f9fc;       /* Alternating section background */
---color-secondary: #5c768d;    /* Nav, footer, section titles */
+--color-secondary: #5c768d;    /* Nav, footer */
 ```
 
 To change the color scheme, update these properties -- all styles reference them.
 
+## Page Structure
+
+### index.html
+Hero -> Story (4 beats with photo breaks: Roots, Range, Scale, Now) -> Proof Strip -> Connect -> Footer
+
+### faq.html
+Nav (scrolled) -> FAQ content -> Footer
+
 ## Common Updates
 
-### Add a portfolio image
-1. Add image to `assets/img/portfolio/` (name it N+1.jpg)
-2. Resize: `sips --resampleWidth 1200 assets/img/portfolio/NEW.jpg`
-3. Add a `<div class="portfolio-card">` block in `index.html` inside `.portfolio-grid`
-4. Set `data-category` to one of: `lifestyle`, `projects`, `travel`
+### Change a story beat photo
+Update the `background-image` URL in the `.story-beat-image` div for that beat in `index.html`.
+
+### Change a photo break image
+Update the `background-image` URL in the `.photo-break` div in `index.html`.
 
 ### Update social links
-Social links appear in three places: top bar, Connect section, and footer. Update all three.
+Social links appear in two places: Connect section in `index.html` and nav links. Update both.
 
-### Sections order in index.html
-Hero -> About -> About Lists -> Interests -> Portfolio/Gallery -> Connect -> Profile -> FAQ -> Contact -> Footer
+### Update FAQ content
+Edit `faq.html` directly -- each question is a `.faq-item` div with h3 and p.
 
 ## Vendor Libraries (kept)
 
@@ -57,11 +70,12 @@ Hero -> About -> About Lists -> Interests -> Portfolio/Gallery -> Connect -> Pro
 - Bootstrap Icons
 - Boxicons
 - AOS (animate on scroll)
-- GLightbox (portfolio image lightbox)
+- GLightbox (kept in vendor but not actively used after redesign)
 
 ## Conventions
 
-- Use `loading="lazy"` on all images below the fold
 - Use `rel="noopener noreferrer"` on external links with `target="_blank"`
-- Twitter links point to `x.com`
+- Twitter/X links point to `x.com`
 - No physical mailing address (privacy)
+- Photo breaks use `role="img"` and `aria-label` for accessibility
+- Story beats alternate layout using `.reverse` class
