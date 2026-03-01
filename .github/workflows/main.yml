@@ -3,16 +3,25 @@ on:
   push:
     branches:
       - main
+
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
-  sync-s3:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: jakejarvis/s3-sync-action@master
+      - uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@8df5847569e6427dd6c4fb1cf565c83acfa8afa7 # v6
         with:
-          args: --delete --exclude '.git/*' --exclude '.github/*'
-        env:
-          AWS_S3_BUCKET: "grannec.com"
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: 'us-west-2'
+          role-to-assume: arn:aws:iam::372718550721:role/grannec-deploy
+          aws-region: us-east-1
+
+      - name: Sync to S3
+        run: aws s3 sync . s3://grannec.com --delete --exclude '.git/*' --exclude '.github/*' --exclude '.claude/*'
+
+      - name: Invalidate CloudFront cache
+        run: aws cloudfront create-invalidation --distribution-id E1TOA1PE0XMGBS --paths '/*'

@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(du:*)",
+      "Bash(do sips:*)",
+      "WebFetch(domain:www.pelotech.com)",
+      "WebFetch(domain:www.linkedin.com)",
+      "WebFetch(domain:www.instagram.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:www.facebook.com)"
+    ]
+  }
+}
