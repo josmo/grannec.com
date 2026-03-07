@@ -21,7 +21,7 @@ jobs:
           aws-region: us-east-1
 
       - name: Sync to S3
-        run: aws s3 sync . s3://grannec.com --delete --exclude '.git/*' --exclude '.github/*' --exclude '.claude/*'
+        run: aws s3 sync . s3://grannec.com --delete --exclude '.git/*' --exclude '.github/*' --exclude '.claude/*' --exclude 'content/*' --exclude 'docs/*'
 
       - name: Invalidate CloudFront cache
         run: aws cloudfront create-invalidation --distribution-id E1TOA1PE0XMGBS --paths '/*'

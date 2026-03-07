@@ -372,6 +372,13 @@ img { max-width: 100%; height: auto; }
 .connect-text .locations {
   font-size: 0.9rem;
   color: var(--color-text-light);
+  margin-bottom: 0.4rem;
+}
+
+.connect-text .langs {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin-top: 0;
   margin-bottom: 2rem;
 }
 

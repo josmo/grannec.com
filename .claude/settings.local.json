@@ -16,7 +16,9 @@
       "mcp__plugin_playwright_playwright__browser_evaluate",
       "mcp__plugin_playwright_playwright__browser_run_code",
       "mcp__plugin_playwright_playwright__browser_press_key",
-      "Bash(open:*)"
+      "Bash(open:*)",
+      "mcp__plugin_context-mode_context-mode__batch_execute",
+      "mcp__plugin_context-mode_context-mode__fetch_and_index"
     ]
   }
 }
